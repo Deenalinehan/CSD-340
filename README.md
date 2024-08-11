@@ -1,1 +1,5 @@
-# CSD-340
+# CSD 340 Web Development with HTML and CSS
+## Contributors
+
+1. Nathan Braun
+2. Deena Linehan
