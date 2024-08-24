@@ -1,0 +1,59 @@
+/*Deena Linehan*/
+/*Assignment 3.3*/
+/*08/23/2024*/
+
+h1 {
+    text-align: center;
+}
+
+#container {
+    text-align: center;
+}
+
+.side-by-side {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.side-by-side .left, .side-by-side .right {
+    width: 45%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.left {
+    border: 1px solid red;
+    text-align: left;
+}
+
+.right {
+    border: 1px dashed red;
+    text-align: left;
+}
+
+ol {
+    list-style-position: inside;
+    padding-left: 20px;
+}
+
+ul {
+    list-style: upper-roman inside;
+    padding-left: 20px;
+}
+
+.bottom {
+    width: 100%;
+    margin-top: 60%;
+    text-align: right;
+}
+
+.bottom a {
+    float: right;
+    margin-bottom: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
