@@ -1,0 +1,54 @@
+/* Deena Linehan */
+/* 09/01/2024 */
+/* Assignment 4.2*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#container h1 {
+    text-align: center;
+    color: rgba(0, 128, 0, 0.8);
+}
+
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10%;
+    text-align: center;
+}
+
+.grid-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+h3 {
+    text-align: center;
+    color: rgba(255, 0, 0, 0.8);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.author {
+    font-style: italic;
+    font-size: 0.75em;
+    color: rgba(0, 0, 255, 0.8);
+}
+
+.bottom {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.bottom a {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
