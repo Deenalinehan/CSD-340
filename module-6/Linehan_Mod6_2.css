@@ -1,6 +1,6 @@
 /* Header styles */
 header {
-    background-color: #333; /* Choose an appropriate color */
+    background-color: #333; 
     color: white;
     padding: 20px;
     text-align: center;
@@ -14,22 +14,22 @@ h1 {
 /* Navbar styles */
 #navbar {
     overflow: hidden;
-    background-color: #444; /* Choose an appropriate color */
-    border-bottom: 15px solid #888; /* Choose an appropriate color */
+    background-color: #6b5b95; 
+    border-bottom: 15px solid ;
 }
 
 #navbar a {
     float: left;
     display: block;
-    color: white; /* or another appropriate color */
+    color: white; 
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 #navbar a:hover {
-    background-color: #555; /* Choose an appropriate color */
-    color: #fff; /* Choose an appropriate color */
+    background-color: #555; 
+    color: #fff; 
 }
 
 /* Container styles */
@@ -48,7 +48,7 @@ h1 {
 .card-title {
     text-align: center;
     font-size: 2em;
-    color: #333; /* Choose an appropriate color */
+    color: #333; 
     font-weight: 400;
 }
 
@@ -62,7 +62,7 @@ h1 {
 
 /* Footer styles */
 footer {
-    background-color: #333; /* Same as header background */
+    background-color: #333; 
     position: absolute;
     bottom: 0;
     width: 100%;
