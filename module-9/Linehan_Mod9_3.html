@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Deena Linehan
+    Assignment 9.3
+-->
+<head>
+    <title>CSD 340 Development with HTML and CSS</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assignment 9.3" >
+    <meta name="author" content="Deena Linehan" >
+
+    <script> 
+        var firstVariableValue = "mass";
+        var secondVariableValue = "pregnant";
+        var thirdVariableValue = "autoimmune disease";
+        var fourthVariableValue = "IVF";
+    </script>
+</head>
+
+<body>
+<div id="container">
+    <h1>Assignment 9.3: JavaScript - Part 1</h1>
+    <p>In 2021, Deena Linehan began her journey with her husband to try for their first baby. After about a year of trying, she knew that something had to be wrong. Doctors encouraged her over the phone that nothing was wrong and it sometimes takes time, but she knew otherwise. After requesting a new doctor, they completed a thorough examination and determined that Deena had a <span id="mass">_________</span> inside of her uterus which led to surgery a week later.</p>
+
+    <p>After this surgery, Deena believed this was the end of her struggles after finding out she was <span id="pregnant">_________</span> two months post-surgery. She was overjoyed for a few short days before she noticed tests getting lighter, followed by blood work to confirm a miscarriage. Another year went by that included many rounds of failed fertility treatments before Deena noticed weight gain and hair loss. After meeting with her doctor, they agreed to test for an <span id="autoimmune">_________</span> that runs in the family, which she ended up testing positive for.</p>
+
+    <p>A few months went by that included new medications to stabilize Deena's thyroid, biopsies for suspicious tumors, and a whole new diet to put her autoimmune disease into remission. She successfully completed this process, allowing her to feel like she was finally going to be able to bring home the child her and her husband yearned for. It was time to meet with her specialists again, where she would be told the disappointing news that she will likely never have kids naturally, followed by a recommendation to proceed with <span id="IVF">_________</span>.</p>
+
+    <p>To Be Continued...</p>
+
+    <p>
+        <button type="button" onclick="document.getElementById('mass').innerHTML = firstVariableValue">Replace 'mass'</button><br><br>
+        <button type="button" onclick="document.getElementById('pregnant').innerHTML = secondVariableValue">Replace 'pregnant'</button><br><br>
+        <button type="button" onclick="document.getElementById('autoimmune').innerHTML = thirdVariableValue">Replace 'autoimmune disease'</button><br><br>
+        <button type="button" onclick="document.getElementById('IVF').innerHTML = fourthVariableValue">Replace 'IVF'</button>
+    </p>
+    <hr />
+
+</div>
+
+</body>
+
+</html>
