@@ -29,3 +29,17 @@ a:hover {
  a:visited {
     color: #c8b8db;
  }
+
+ /* Responsive Styles */
+@media (max-width: 768px) { /* Target devices with width up to 768px */
+    .container {
+        margin-left: 20px; /* Reduce margins for mobile */
+        margin-right: 20px;
+        padding: 10px; /* Reduce padding */
+    }
+
+    h1, h2, h3, h4 {
+        padding: 15px; /* Further reduce padding */
+        font-size: 1.5em; /* Make text slightly smaller */
+    }
+}

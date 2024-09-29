@@ -30,11 +30,11 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             cursor: pointer;
-            transition: filter 0.3s ease; /* Smooth transition for filter effect */
+            transition: filter 0.3s ease; 
         }
 
         .image-gallery img:hover {
-            filter: invert(1); /* Apply negative color scheme on hover */
+            filter: invert(1); 
         }
 
         .message {
@@ -50,7 +50,7 @@
 
     <h1>Assignment 10.3: JavaScript - Part 2</h1>
 
-    <!-- Image gallery with click functionality -->
+
     <div class="image-gallery">
         <a href="#" onclick="displayMessage('This is Chica, a sweet two year old pup!')">
             <img src="image1.jpg" alt="Image 1">
@@ -63,11 +63,14 @@
         </a>
     </div>
 
-    <!-- Message area to display feedback from JavaScript -->
+   
     <div class="message" id="message">Click an image to see a message below.</div>
 
+    <footer></footer>
+        <p><a href="https://deenalinehan.github.io/CSD-340/">Back to Portal</a></p>
+    </footer>
+
     <script>
-        // Function to display a message based on the clicked image
         function displayMessage(message) {
             document.getElementById("message").innerText = message;
         }
