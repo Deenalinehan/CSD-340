@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 20px;
+        }
+        input[type="text"] {
+            width: 200px;
+            padding: 8px;
+            margin-right: 10px;
+        }
+        button {
+            margin-right: 10px;
+            padding: 8px;
+        }
+        .separator {
+            border-top: 2px solid black;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        #display {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Assignment 11.2: JavaScript - Part 3</h1>
+        
+        <!-- Textbox and buttons aligned next to each other -->
+        <input type="text" id="itemInput" placeholder="Enter item here">
+        <button onclick="addItem()">Add</button>
+        <button onclick="deleteLastItem()">Delete Last Entry</button>
+        <button onclick="displayItems()">Display</button>
+
+        <!-- Black separator line -->
+        <div class="separator"></div>
+
+        <!-- Area to display the array contents -->
+        <div id="display"></div>
+    </div>
+
+    <script>
+        // Array to store items
+        let items = [];
+
+        // Function to add an item to the array
+        function addItem() {
+            let item = document.getElementById("itemInput").value;
+
+            if (item.trim() !== "") {
+                items.push(item);
+                alert(`Added: "${item}" at position ${items.length}`);
+                document.getElementById("itemInput").value = "";  // Clear the input field
+            } else {
+                alert("Please enter a valid item.");
+            }
+        }
+
+        // Function to delete the last item in the array
+        function deleteLastItem() {
+            if (items.length > 0) {
+                let deletedItem = items.pop();
+                alert(`Deleted: "${deletedItem}"`);
+            } else {
+                alert("No items to delete.");
+            }
+        }
+
+        // Function to display the items in the array
+        function displayItems() {
+            let displayArea = document.getElementById("display");
+            displayArea.innerHTML = "";  // Clear previous display
+
+            if (items.length > 0) {
+                items.forEach((item, index) => {
+                    displayArea.innerHTML += `${index + 1}. ${item}\n`;
+                });
+            } else {
+                displayArea.innerHTML = "No items to display.";
+            }
+        }
+    </script>
+</body>
+</html>
