@@ -28,6 +28,13 @@
         #display {
             white-space: pre-wrap;
         }
+        .item-container {
+            display: flex;
+            align-items: center;
+        }
+        .item-container input[type="checkbox"] {
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -37,7 +44,7 @@
         <!-- Textbox and buttons aligned next to each other -->
         <input type="text" id="itemInput" placeholder="Enter item here">
         <button onclick="addItem()">Add</button>
-        <button onclick="deleteLastItem()">Delete Last Entry</button>
+        <button onclick="deleteSelectedItems()">Delete Selected</button>
         <button onclick="displayItems()">Display</button>
 
         <!-- Black separator line -->
@@ -64,13 +71,19 @@
             }
         }
 
-        // Function to delete the last item in the array
-        function deleteLastItem() {
-            if (items.length > 0) {
-                let deletedItem = items.pop();
-                alert(`Deleted: "${deletedItem}"`);
+        // Function to delete selected items
+        function deleteSelectedItems() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+
+            if (checkboxes.length > 0) {
+                checkboxes.forEach(checkbox => {
+                    const itemIndex = parseInt(checkbox.getAttribute('data-index'));
+                    items.splice(itemIndex, 1);  // Remove the item from the array
+                });
+                alert("Selected items deleted.");
+                displayItems();  // Update the display after deletion
             } else {
-                alert("No items to delete.");
+                alert("No items selected to delete.");
             }
         }
 
@@ -81,7 +94,12 @@
 
             if (items.length > 0) {
                 items.forEach((item, index) => {
-                    displayArea.innerHTML += `${index + 1}. ${item}\n`;
+                    displayArea.innerHTML += `
+                        <div class="item-container">
+                            <input type="checkbox" data-index="${index}">
+                            <span>${index + 1}. ${item}</span>
+                        </div>
+                    `;
                 });
             } else {
                 displayArea.innerHTML = "No items to display.";
