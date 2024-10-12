@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Deena Linehan">
+    <meta name="description" content="Assignment 12.2: JavaScript - Part 4">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Linehan_Mod3_3.css"> <!-- Custom CSS file -->
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        #container {
+            text-align: center;
+        }
+
+        .side-by-side {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .side-by-side .left,
+        .side-by-side .right {
+            width: 45%;
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 15px;
+        }
+
+        .left {
+            border: 1px solid red;
+            text-align: left;
+        }
+
+        .right {
+            border: 1px dashed red;
+            text-align: left;
+        }
+
+        ol {
+            list-style-position: inside;
+            padding-left: 20px;
+        }
+
+        ul {
+            list-style: upper-roman inside;
+            padding-left: 20px;
+        }
+
+        .button-container {
+            text-align: center; /* Center buttons */
+            margin: 10px 0; /* Add some margin above and below the buttons */
+        }
+
+        .bottom {
+            width: 100%;
+            margin-top: 20px; /* Adjusted margin to move the link higher */
+            text-align: right;
+        }
+
+        .bottom a {
+            float: right;
+            margin-bottom: 20px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Assignment 12.2: JavaScript - Part 4</h1>
+
+        <div class="side-by-side">
+            <div class="left box">
+                <h3>Top 10 Favorite Books</h3>
+                
+                <!-- Button Container placed directly under the header -->
+                <div class="button-container">
+                    <button onclick="displayTopToBottom()">Top to Bottom</button>
+                    <button onclick="displayBottomToTop()">Bottom to Top</button>
+                </div>
+
+                <ol id="bookList">
+                    <!-- Book list will be populated by JavaScript -->
+                </ol>
+            </div>
+
+            <div class="right box">
+                <h3>5 Things I've Learned Since the Course Started</h3>
+                <ul>
+                    <li>Ordered Lists</li>
+                    <li>Unordered Lists</li>
+                    <li>How to Link HTML files to CSS files</li>
+                    <li>The Importance of Properly Designing your Website</li>
+                    <li>How to Add Google Fonts to a Web Page</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <a href="https://deenalinehan.github.io/CSD-340/">Back to Portal Page</a>
+        </div>
+    </div>
+
+    <script>
+        // Array of top ten favorite books
+        let books = [
+            "Fourth Wing",
+            "Lessons in Chemistry",
+            "Happy Place",
+            "The Wager",
+            "It Ends with Us",
+            "Atomic Habits",
+            "Spare",
+            "A Court of Thorns and Roses",
+            "The Body Keeps the Score",
+            "Killers of the Flower Moon"
+        ];
+
+        // Function to display the books in ascending order (Top to Bottom)
+        function displayTopToBottom() {
+            let bookList = document.getElementById("bookList");
+            bookList.innerHTML = "";  // Clear previous list
+            books.sort().forEach(book => {
+                let li = document.createElement("li");
+                li.textContent = book;  // Just the book title, no additional numbering
+                bookList.appendChild(li);
+            });
+        }
+
+        // Function to display the books in descending order (Bottom to Top)
+        function displayBottomToTop() {
+            let bookList = document.getElementById("bookList");
+            bookList.innerHTML = "";  // Clear previous list
+            books.sort().reverse().forEach(book => {
+                let li = document.createElement("li");
+                li.textContent = book;  // Just the book title, no additional numbering
+                bookList.appendChild(li);
+            });
+        }
+
+        // Initial load: display books in ascending order
+        displayTopToBottom();
+    </script>
+</body>
+
+</html>
